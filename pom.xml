@@ -25,6 +25,7 @@
         <commons.exception.version>3.0.8</commons.exception.version>
         <liquibase.version>4.20.0</liquibase.version>
         <springfox.version>3.0.0</springfox.version>
+        <openapi.version>2.1.0</openapi.version>
         <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
         <pagehelper.version>5.3.2</pagehelper.version>
         <authorization.server.version>1.1.0</authorization.server.version>
@@ -87,6 +88,11 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
                 <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${openapi.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
