@@ -65,6 +65,8 @@
                                     <workingDirectory>${project.basedir}</workingDirectory>
                                     <arguments>
                                         <argument>build</argument>
+                                        <argument>--platform</argument>
+                                        <argument>linux/amd64</argument>
                                         <argument>.</argument>
                                         <argument>-f</argument>
                                         <argument>docker/Dockerfile</argument>
