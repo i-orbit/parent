@@ -110,6 +110,22 @@
                                 </configuration>
                             </execution>
                             <execution>
+                                <id>harbor-tag-latest</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>docker</executable>
+                                    <workingDirectory>${project.basedir}</workingDirectory>
+                                    <arguments>
+                                        <argument>tag</argument>
+                                        <argument>orbit/${project.name}:${project.version}</argument>
+                                        <argument>${env.harbor}/orbit/${project.name}:latest</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
                                 <id>harbor-login</id>
                                 <phase>package</phase>
                                 <goals>
@@ -140,6 +156,21 @@
                                     <arguments>
                                         <argument>push</argument>
                                         <argument>${env.harbor}/orbit/${project.name}:${project.version}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>harbor-push-latest</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>docker</executable>
+                                    <workingDirectory>${project.basedir}</workingDirectory>
+                                    <arguments>
+                                        <argument>push</argument>
+                                        <argument>${env.harbor}/orbit/${project.name}:latest</argument>
                                     </arguments>
                                 </configuration>
                             </execution>
