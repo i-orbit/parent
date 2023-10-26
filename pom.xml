@@ -16,11 +16,11 @@
     </parent>
 
     <properties>
-        <java.version>20</java.version>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
-        <spring-cloud.version>2022.0.3</spring-cloud.version>
-        <alibaba-cloud.version>2022.0.0.0-RC2</alibaba-cloud.version>
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <spring-cloud.version>2022.0.4</spring-cloud.version>
+        <alibaba-cloud.version>2022.0.0.0</alibaba-cloud.version>
         <commons.version>1.0.0-SNAPSHOT</commons.version>
         <commons.exception.version>3.0.8</commons.exception.version>
         <liquibase.version>4.20.0</liquibase.version>
