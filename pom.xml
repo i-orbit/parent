@@ -27,7 +27,7 @@
         <springfox.version>3.0.0</springfox.version>
         <openapi.version>2.1.0</openapi.version>
         <mybatis.plus.version>3.5.5</mybatis.plus.version>
-        <pagehelper.version>6.1.0</pagehelper.version>
+        <pagehelper.version>2.1.0</pagehelper.version>
         <authorization.server.version>1.2.1</authorization.server.version>
         <oauth2-oidc-sdk.version>10.9.1</oauth2-oidc-sdk.version>
 
@@ -261,7 +261,7 @@
             </dependency>
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper.version}</version>
             </dependency>
             <dependency>
