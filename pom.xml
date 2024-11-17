@@ -27,7 +27,7 @@
         <mybatis.plus.version>3.5.9</mybatis.plus.version>
         <oauth2-oidc-sdk.version>11.18</oauth2-oidc-sdk.version>
         <commons.version>2.0.0-SNAPSHOT</commons.version>
-        <commons.exception.version>3.1.3</commons.exception.version>
+        <commons.exception.version>3.1.4</commons.exception.version>
 
         <env.nacos.server>192.168.26.195:8848</env.nacos.server>
         <env.profile>dev</env.profile>
