@@ -26,10 +26,8 @@
         <mybatis.plus.version>3.5.9</mybatis.plus.version>
         <oauth2-oidc-sdk.version>11.18</oauth2-oidc-sdk.version>
         <commons.version>2.0.0-SNAPSHOT</commons.version>
-        <commons.exception.version>3.1.4</commons.exception.version>
+        <commons.exception.version>3.1.5</commons.exception.version>
 
-        <env.nacos.server>192.168.26.195:8848</env.nacos.server>
-        <env.profile>dev</env.profile>
         <env.harbor>harbor.inmaytide.com</env.harbor>
         <env.harbor.user>admin</env.harbor.user>
         <env.harbor.pass>zaq1@WSX</env.harbor.pass>
@@ -69,10 +67,6 @@
                                         <argument>docker/Dockerfile</argument>
                                         <argument>-t</argument>
                                         <argument>orbit/${project.name}:${project.version}</argument>
-                                        <argument>--build-arg</argument>
-                                        <argument>NACOS_SERVER=${env.nacos.server}</argument>
-                                        <argument>--build-arg</argument>
-                                        <argument>PROFILE=${env.profile}</argument>
                                     </arguments>
                                 </configuration>
                             </execution>
@@ -187,27 +181,26 @@
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.inmaytide.orbit</groupId>
-            <artifactId>commons</artifactId>
-            <version>${commons.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.inmaytide.orbit</groupId>
-            <artifactId>commons-service</artifactId>
-            <version>${commons.version}</version>
-        </dependency>
-    </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring.cloud.alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-bom</artifactId>
+                <version>${mybatis.plus.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.inmaytide.orbit</groupId>
+                <artifactId>commons</artifactId>
+                <version>${commons.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.inmaytide</groupId>
@@ -217,6 +210,11 @@
             <dependency>
                 <groupId>com.inmaytide.orbit</groupId>
                 <artifactId>commons-metrics</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.inmaytide.orbit</groupId>
+                <artifactId>commons-service</artifactId>
                 <version>${commons.version}</version>
             </dependency>
             <dependency>
@@ -238,11 +236,6 @@
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
                 <version>${openapi.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
-                <version>${mybatis.plus.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.nimbusds</groupId>
