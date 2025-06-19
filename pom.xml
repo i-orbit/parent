@@ -5,26 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.inmaytide.orbit</groupId>
     <artifactId>parent</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.0</version>
+        <version>3.5.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
         <java.version>21</java.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <spring.cloud.alibaba.version>2023.0.1.2</spring.cloud.alibaba.version>
-        <liquibase.version>4.30.0</liquibase.version>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
+        <spring.cloud.alibaba.version>2023.0.3.3</spring.cloud.alibaba.version>
+        <liquibase.version>4.32.0</liquibase.version>
         <springfox.version>3.0.0</springfox.version>
-        <openapi.version>2.1.0</openapi.version>
-        <mybatis.plus.version>3.5.9</mybatis.plus.version>
-        <oauth2-oidc-sdk.version>11.18</oauth2-oidc-sdk.version>
+        <openapi.version>2.8.9</openapi.version>
+        <mybatis.plus.version>3.5.12</mybatis.plus.version>
+        <oauth2-oidc-sdk.version>11.26</oauth2-oidc-sdk.version>
         <commons.version>2.0.0-SNAPSHOT</commons.version>
         <commons.exception.version>3.1.5</commons.exception.version>
 
@@ -47,7 +46,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
-                        <version>3.1.0</version>
+                        <version>3.5.1</version>
                         <executions>
                             <execution>
                                 <id>docker-build</id>
@@ -82,7 +81,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
-                        <version>3.1.0</version>
+                        <version>3.5.1</version>
                         <executions>
                             <execution>
                                 <id>harbor-tag</id>
